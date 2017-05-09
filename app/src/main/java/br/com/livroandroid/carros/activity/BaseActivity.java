@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 
 import br.com.livroandroid.carros.Fragments.CarrosFragment;
+import br.com.livroandroid.carros.Fragments.CarrosTabFragment;
 import br.com.livroandroid.carros.Fragments.SiteLivroFragment;
 import br.com.livroandroid.carros.R;
 import livroandroid.lib.utils.NavDrawerUtil;
@@ -68,7 +69,7 @@ public class BaseActivity extends livroandroid.lib.activity.BaseActivity {
         switch (menuItem.getItemId()){
             case R.id.nav_item_carros_todos:
               toast("Clicou em carros");
-                replaceFragment(CarrosFragment.newInstance("Carros"));
+                replaceFragment(new CarrosTabFragment());
               break;
             case R.id.nav_item_carros_classicos:
                 toast("Clicou em carros classicos");

@@ -6,6 +6,7 @@ import android.view.MenuItem;
 
 import br.com.livroandroid.carros.Fragments.AboutDialogText;
 import br.com.livroandroid.carros.Fragments.CarrosFragment;
+import br.com.livroandroid.carros.Fragments.CarrosTabFragment;
 import br.com.livroandroid.carros.R;
 
 public class MainActivity extends BaseActivity{
@@ -16,7 +17,7 @@ public class MainActivity extends BaseActivity{
         setContentView(R.layout.activity_main);
         setUpToolbar();
         setupNavDrawer();
-        replaceFragment(CarrosFragment.newInstance("carros"));
+        replaceFragment(new CarrosTabFragment());
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
