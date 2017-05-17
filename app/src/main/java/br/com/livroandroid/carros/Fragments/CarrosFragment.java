@@ -2,6 +2,7 @@ package br.com.livroandroid.carros.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.parceler.Parcels;
 
 import java.util.List;
 
@@ -65,8 +68,9 @@ public class CarrosFragment extends BaseFragment {
             @Override
             public void onClickCarro(View view, int idx){
                 Carro c = carros.get(idx);
-                Intent intent = new Intent(getContext(), CarroActivity.class);
-                intent.putExtra("Carro", c);
+                //Toast.makeText(getContext(), "Carro: "+c.nome, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getContext(),CarroActivity.class);
+                intent.putExtra("carro", Parcels.wrap(c));
                 startActivity(intent);
             }
         };

@@ -1,40 +1,44 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="12dp"
-    tools:context="br.com.livroandroid.carros.Fragments.CarroFragment">
+    android:padding="12dp">
 
     <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.CardView
         android:id="@+id/card_view_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:clickable="true"
         card_view:cardBackgroundColor="@color/white"
         card_view:cardCornerRadius="2dp"
-        card_view:cardElevation="6dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-    <LinearLayout
+        card_view:cardElevation="6dp">
+
+       <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="2dp">
-        <ImageView
-            android:layout_width="@dimen/foto_carro_width"
-            android:layout_height="@dimen/foto_carro_height"
-            android:layout_gravity="center"
-            android:scaleType="center"/>
-        <view
-            android:background="@color/blue"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginBottom="6dp"
-            android:layout_marginTop="6dp"/>
-        <ScrollView
+
+           <ImageView
+               android:id="@+id/img_carro_fragment"
+               android:layout_width="@dimen/foto_carro_width"
+               android:layout_height="@dimen/foto_carro_height"
+               android:layout_gravity="center"
+               android:scaleType="center" />
+
+          <View
+              android:background="@color/primary"
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:layout_marginBottom="6dp"
+              android:layout_marginTop="6dp"/>
+
+          <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:id="@+id/tDesc"
                 android:layout_width="match_parent"
