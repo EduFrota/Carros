@@ -1,12 +1,13 @@
 package br.com.livroandroid.carros.domain;
 
-import java.io.Serializable;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 /**
  * Created by edu-f on 04/05/2017.
  */
 @org.parceler.Parcel
-public class Carro {
+public class Carro{
     private static final long serialVersionUID = 6601006766832473959L;
     public long id;
     public String tipo;
@@ -17,6 +18,7 @@ public class Carro {
     public String urlVideo;
     public String latitude;
     public String longitude;
+
 
     @Override
     public String toString() {

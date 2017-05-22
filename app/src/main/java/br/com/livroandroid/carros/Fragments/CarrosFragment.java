@@ -52,6 +52,12 @@ public class CarrosFragment extends BaseFragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setHasFixedSize(true);
+        view.findViewById(R.id.floatingActionButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                snack(recyclerView,"Exemplo de Botão");
+            }
+        });
         return view;
     }
     @Override
